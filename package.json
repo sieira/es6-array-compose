@@ -1,0 +1,38 @@
+{
+  "name": "es6-array-compose",
+  "version": "0.1.0",
+  "description": "Create a proxy joining two arrays in a single one, while still being sepparated arrays",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --harmony_proxies index",
+    "test": "node --harmony_proxies ./node_modules/.bin/grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sieira/es6-array-compose.git"
+  },
+  "keywords": [
+    "javascript",
+    "node",
+    "array",
+    "composition",
+    "proxy",
+    "es6"
+  ],
+  "author": "Luis Sieira <luis.sieira@spacebar.fr> (http://www.spacebar.fr/)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sieira/es6-array-compose/issues"
+  },
+  "homepage": "https://github.com/sieira/es6-array-compose#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-mocha-test": "^0.12.7",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "harmony-reflect": "^1.4.2"
+  }
+}
