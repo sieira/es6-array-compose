@@ -36,13 +36,24 @@ var buildHandler = function (arr) {
        * Methods that modify the tail of the array
        */
       case 'push':
-        return Array.prototype[property].bind(arr);
+        return arr[property].bind(arr);
       /**
       * Methods that modify the tail of the array, if it's not empty
       * and the head otherwise
       */
       case 'pop':
-        return arr.length ? Array.prototype[property].bind(arr) : target[property];
+        return arr.length ? arr[property].bind(arr) : target[property].bind(target);
+      /**
+       * Methods that modify the head of the array
+       */
+      case 'unshift':
+          return target[property].bind(target);
+      /**
+       * Methods that modify the head of the array, if it's not empty
+       * and the tail otherwise
+       */
+      case 'shift':
+        return target.length ? target[property].bind(target) : arr[property].bind(arr);
       /**
       * Methods that do not modify the array, and afect to its entire length
       */

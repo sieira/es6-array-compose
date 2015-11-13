@@ -77,6 +77,29 @@ describe('Test all the array methods', function() {
     arr.equals([]).should.be.true;
   });
 
+  it('unshift', () => {
+    arr1.unshift(5);
+    arr2.unshift(3);
+    arr3.unshift(2, 1);
+    arr2.unshift(4);
+    arr.unshift(6);
+    arr.unshift(8, 7);
+
+    arr.equals([8,7,6,5,4,3,2,1]).should.be.true;
+  });
+
+  it('shift', () => {
+    arr1.push(1,2);
+    arr2.push(3);
+    arr3.push(4, 5);
+
+    while(arr.length) {
+      arr.shift();
+    }
+
+    arr.equals([]).should.be.true;
+  });
+
   it('reduce', () => {
     arr1.push(1);
     arr2.push(2);
