@@ -1,6 +1,6 @@
 {
   "name": "es6-array-compose",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Create a proxy joining two arrays in a single one, while still being sepparated arrays",
   "main": "index.js",
   "scripts": {
